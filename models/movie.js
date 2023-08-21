@@ -38,10 +38,8 @@ const MovieSchema = new Schema({
     ref: 'user',
     required: true,
   },
-  movieId: { type: Number, required: true },
   nameRU: { type: String, required: true },
   nameEN: { type: String, required: true },
-
 });
 
 export default model('movie', MovieSchema);

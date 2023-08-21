@@ -8,13 +8,13 @@ import helmet from 'helmet';
 import routes from './routes/index.js';
 import { login, createUser } from './controllers/users.js';
 import auth from './middlewares/auth.js';
-import { validateLogin, validateCreateUser } from './middlewares/validation.js';
+import { validateLogin, validateRegister } from './middlewares/validation.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
 import { INTERNAL_SERVER_STATUS, limiter, corsOption } from './utils/constants.js';
 
-const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
+import 'dotenv/config';
 
-limiter();
+const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017' } = process.env;
 
 const app = express();
 app.use(express.json());
@@ -30,7 +30,7 @@ app.get('/crash-test', () => {
 });
 
 app.post('/signin', validateLogin, login);
-app.post('/signup', validateCreateUser, createUser);
+app.post('/signup', validateRegister, createUser);
 app.use(auth, routes);
 
 app.use(errorLogger);

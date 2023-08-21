@@ -66,7 +66,6 @@ export const getCurrentUser = async (req, res, next) => {
   const userId = req.user._id;
   try {
     const user = await User.findById(userId).orFail(() => { throw new NotFoundError('user not found'); });
-
     return res.status(OK_STATUS).json(user);
   } catch (err) {
     if (err instanceof mongoose.Error.CastError) return next(new BadRequestError('bad data'));

@@ -11,13 +11,14 @@ import ForbiddenError from '../errors/forbidden.js';
 export const getMovies = async (req, res, next) => {
   const owner = req.user._id;
   try {
-    const movies = await Movie.find(owner);
+    const movies = await Movie.find({ owner });
     return res.status(OK_STATUS).json(movies);
   } catch (err) {
     return next(err);
   }
 };
-// delete /movieId
+
+// delete /:movieId
 export const deleteMovie = async (req, res, next) => {
   const { movieId } = req.params;
   const ownerId = req.user._id;
