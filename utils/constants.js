@@ -30,7 +30,7 @@ export const limiter = rateLimit({
 
 // cors
 export const corsOption = {
-  origin: ['http://localhost:3001', 'https://neequu.nomoreparties.co'],
+  origin: ['http://localhost:3001', 'https://moovees.nomoredomainsicu.ru'],
 };
 
 // db
