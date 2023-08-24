@@ -1,4 +1,4 @@
-# backend movies api
+# movies api
 
 Адрес репозитория: https://github.com/niccc0/movies-explorer-api
 
