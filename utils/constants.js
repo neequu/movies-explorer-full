@@ -30,7 +30,7 @@ export const limiter = rateLimit({
 
 // cors
 export const corsOption = {
-  origin: ['http://localhost:3000','https://localhost:3000','http://localhost:3001', 'https://moovees.nomoredomainsicu.ru', 'https://api.moovees.nomoredomainsicu.ru'],
+  origin: ['http://localhost:3000'],
 };
 
 // db
