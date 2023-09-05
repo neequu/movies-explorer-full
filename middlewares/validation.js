@@ -34,7 +34,7 @@ export const validateCreateMovie = celebrate({
     image: Joi.string().required().regex(linkRegex),
     trailerLink: Joi.string().required().regex(linkRegex),
     thumbnail: Joi.string().required().regex(linkRegex),
-    movieId: Joi.number().required(),
+    id: Joi.number().required(),
     nameRU: Joi.string().required().min(1).max(100),
     nameEN: Joi.string().required().min(1).max(100),
   }),
