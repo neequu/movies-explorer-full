@@ -19,7 +19,7 @@ export const secretKey = 'secret';
 // regex
 export const objIdRegex = /^[0-9a-fA-F]{24}$/;
 export const linkRegex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/;
-export const imagePathRegex = /\/[a-zA-Z]\/[a-zA-Z][0-9]\.(jpeg|png)/
+export const imagePathRegex = /\/[a-z]+\/[0-9a-z_]+.jpeg/gmi;
 
 // limiter
 export const limiter = rateLimit({
