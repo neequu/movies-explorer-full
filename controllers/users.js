@@ -29,11 +29,11 @@ export const updateProfile = async (req, res, next) => {
 
   try {
     const userWithEmail = await User.findOne({ email });
-    if (userWithEmail) {
-      throw new ConflictError('email already exists');
-    }
+
     return updateUser(req, res, next, { name, email });
   } catch (err) {
+    if (err.code === 11000) return next(new ConflictError('already exists'));
+    if (err instanceof mongoose.Error.ValidationError) return next(new BadRequestError('bad data'));
     return next(err);
   }
 };
