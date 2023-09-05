@@ -21,16 +21,13 @@ const updateUser = async (req, res, next, data) => {
   } catch (err) {
     if (err instanceof mongoose.Error.ValidationError) { return next(new BadRequestError('bad data')); }
     if (err.code === 11000) {
-        return next(new ConflictError('user already exists'));
-     }
+      return next(new ConflictError('user already exists'));
+    }
     return next(err);
   }
 };
 
-export const updateProfile = (req, res, next) => {
-  const { name, email } = req.body;
-  return updateUser(req, res, next, { name, email });
-};
+export const updateProfile = (req, res, next) => updateUser(req, res, next, req.body);
 
 export const getCurrentUser = async (req, res, next) => {
   const userId = req.user._id;
