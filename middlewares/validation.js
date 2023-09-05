@@ -1,5 +1,5 @@
 import { celebrate, Joi } from 'celebrate';
-import { objIdRegex, linkRegex } from '../utils/constants.js';
+import { objIdRegex, linkRegex, imagePathRegex } from '../utils/constants.js';
 // auth
 export const validateLogin = celebrate({
   body: Joi.object().keys({
@@ -31,9 +31,9 @@ export const validateCreateMovie = celebrate({
     duration: Joi.number().required(),
     year: Joi.string().required().max(4),
     description: Joi.string().required().min(1).max(1000),
-    image: Joi.string().required().regex(linkRegex),
+    image: Joi.string().required().regex(imagePathRegex),
     trailerLink: Joi.string().required().regex(linkRegex),
-    thumbnail: Joi.string().required().regex(linkRegex),
+    thumbnail: Joi.string().required().regex(imagePathRegex),
     id: Joi.number().required(),
     nameRU: Joi.string().required().min(1).max(100),
     nameEN: Joi.string().required().min(1).max(100),
