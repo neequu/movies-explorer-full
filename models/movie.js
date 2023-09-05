@@ -38,7 +38,7 @@ const MovieSchema = new Schema({
     ref: 'user',
     required: true,
   },
-  id: { type: Number, required: true },
+  movieId: { type: Number, required: true },
   nameRU: { type: String, required: true },
   nameEN: { type: String, required: true },
 });
