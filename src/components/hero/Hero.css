@@ -1,0 +1,123 @@
+.hero {
+  --padding: 0.625rem;
+
+  padding-top: 4.375rem;
+  padding-bottom: 1.875rem;
+  padding-inline: var(--padding);
+  
+  width: calc(100% - var(--padding) * 2);
+
+  background-color: var(--blue-700);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  text-align: center;
+}
+
+.hero__content-container {
+  margin-block-start: 2.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.hero__heading {
+  font-size: 1.875rem;
+  line-height: 2.375rem; 
+  letter-spacing: -0.075rem;
+  
+  font-weight: 400;
+  margin: 0;
+
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.hero__text {
+  font-size: 0.8125rem;
+  margin: 0;
+  color: #ffffff80;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+
+  max-width: 260px;
+  margin-inline: auto;
+}
+
+.hero__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+
+  padding-inline: 1.25rem;
+  padding-block: 0.625rem;
+
+  border-radius: 0.1875rem;
+  border: 1px solid #ffffff99;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: filter 250ms ease;
+}
+
+.hero__link:hover { filter: brightness(70%); }
+
+.hero__image {
+  order: -1;
+  height: 206px;
+  width: 210px;
+}
+
+@media screen and (min-width:768px) {
+  .hero {
+    --padding: 1.875rem;
+    padding-top: 8.75rem;
+    padding-bottom: 4.6875rem;
+    padding-inline: var(--padding);
+  }
+
+  .hero__heading {
+    font-size: 2.5rem;
+    line-height: 3.125rem; 
+  }
+  .hero__text { margin-bottom: 5.75rem; }
+  .hero__content-container { margin-top: 3rem; }
+  
+  .hero__image {
+    width: 310px;
+    height: 304px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .hero {
+    --padding: 4.375rem;
+    padding-block: 4.6875rem;
+    padding-inline: var(--padding);
+
+    text-align: left;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .hero__content-container {
+    margin-top: 0;
+    place-items: start;
+  }
+  .hero__text {
+    max-width: 310px;
+    margin-inline: 0;
+    margin-top: 2.25rem;
+    margin-bottom: 9.125rem;
+  }
+  .hero__image { justify-self: end; }
+
+  .hero__heading {
+    max-width: 640px; 
+    font-size: 3.125rem;
+    line-height: 3.625rem; 
+  }
+}

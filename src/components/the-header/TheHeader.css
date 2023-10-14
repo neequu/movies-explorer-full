@@ -1,0 +1,102 @@
+.header {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  width: 100%;
+  background-color: var(--dark);
+}
+.header_accent {background-color: var(--blue-700);}
+.header__container {
+  --padding: 0.875rem;
+  display: flex;
+  padding-inline: var(--padding);
+  padding-block: 1.125rem;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(100% - var(--padding) * 2);
+  margin-bottom: -2px;
+}
+.header__logo {
+  cursor: pointer;
+  transition: filter 250ms ease-in-out;
+  width: 38px;
+  aspect-ratio: 1/1;
+}
+.header__mobile-nav-toggle {
+  border: 0;
+  padding: 0;
+
+  background: transparent;
+  background-image: url('@/assets/menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+
+  transition: filter 250ms;
+}
+.header__mobile-nav-toggle:hover {filter: brightness(70%)}
+.header__link-container {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.header__link {
+  display: inline-flex;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.625rem;
+  color: #fff;
+
+  transition: filter 250ms ease;
+}
+.header__link:hover { filter: brightness(70%); }
+.header__link_bright:hover { filter: brightness(110%);  }
+
+.header__link_green {
+  background-color: var(--green-400);
+  color: var(--black);
+  border-radius: 0.1875rem;
+  padding-block: 0.3125rem;
+  padding-inline: 0.75rem;
+}
+@media screen and (min-width:768px) {
+  .header__container {
+    --padding: 1.875rem;
+    padding-inline: var(--padding);
+  }
+  .header__link {
+    font-size: 0.75rem;
+  }
+  .header__link_green {
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+  }
+  .header__link-container { gap: 1.875rem; }
+  .header__mobile-nav-toggle {
+    width: 28px;
+    height: 23px;
+  }
+}
+@media screen and (min-width:900px) {
+  .header__mobile-nav-toggle { display: none; }
+  
+}
+@media screen and (min-width:1280px) {
+  .header__container { 
+    --padding: 4.375rem;
+    padding-inline: var(--padding);
+  }
+  .header__link { font-size: 0.75rem; }
+
+  .header__link_green {
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+  }
+  .header__link-container { gap: 1.875rem; }
+}

@@ -1,0 +1,108 @@
+.movies-card {
+  background-color: var(--gray-950);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 0.375rem;
+
+  max-width: var(--movies-width);
+}
+.movies-card__top {
+  padding: 0.875rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movies-card__title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  flex: 4;
+
+  margin: 0;
+}
+.movies-card__link {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+.movies-card__time {
+  color: var(--gray-600);
+  font-size: 0.625rem;
+  line-height: 1.125rem;  
+  flex: 1;
+  text-align: right;
+}
+.movies-card__button {
+  font-family: 'Inter', Arial, sans-serif;
+  
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  background-color: var(--gray-800);
+
+  border-radius: 1000vh;
+
+  font-size: 0.75rem;
+  line-height: 0.6875rem;
+
+  cursor: pointer;
+  position: relative;
+
+  width: 100px;
+  height: 29px;
+
+  display: grid;
+  place-content: center;
+
+  margin-inline: auto;
+  margin-block: 0.875rem;
+  transition: filter 250ms;
+}
+.movies-card__button:hover { filter: brightness(90%); }
+
+.movies-card__button_saved {
+  background-color: var(--red-500);
+  background-image: url(@/assets/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 7px;
+}
+.movies-card__button_remove {
+  background-image: url(@/assets/remove.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 7px;
+}
+.movies-card__button:is(:focus) {animation: scaleOnClick 250ms 1;}
+.movies-card__image {
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+}
+@keyframes scaleOnClick {
+  0% { scale: 1; }
+  50% { scale: 1.1; }
+  100% { scale: 1; }
+}
+@media screen and (min-width:768px) {
+  .movies-card__button { margin-block: 1.125rem; }
+  .movies-card__top {
+    padding: 1.125rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .movies-card__title { font-size: 0.9375rem; }
+  .movies-card__time {
+    color: var(--gray-600);
+    line-height: 1.125rem;  
+    font-size: 0.8125rem;
+  }
+  .movies-card__image {height: 190px;}
+}
+@media screen and (min-width:1280px) {
+  .movies-card__image {height: 200px;}
+}

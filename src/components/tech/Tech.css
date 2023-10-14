@@ -1,0 +1,120 @@
+.tech {
+  --padding: 1.125rem;
+  padding-block:4.375rem;
+  padding-inline: var(--padding);
+
+  width: calc(100% - var(--padding) * 2);
+}
+
+.tech__heading {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  margin: 0;
+
+  padding-bottom: 1.75rem;
+  border-bottom: var(--gray-300) 1px solid;
+}
+
+.tech__content {
+  padding-top: 3.75rem;
+  padding-bottom: 3.13rem;
+  text-align: center;
+}
+
+.tech__subheading {
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.075rem;
+  margin: 0;
+}
+
+.tech__text {
+  font-size: 0.6875rem;
+  line-height: 1rem; 
+  letter-spacing: -0.0275rem;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.tech__blocks {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.625rem;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, max-content)); 
+  padding-inline: 1rem;
+}
+
+.tech__block {
+  padding-block: 1.3125rem;
+  width: 84px;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: -0.03rem;
+  border-radius: 0.625rem;
+  background: var(--gray-800);
+}
+
+@media screen and (min-width:768px) {
+  .tech {
+    background-color: var(--gray-900);
+    --padding: 3.125rem;
+    padding-block:5.625rem;
+    padding-inline: var(--padding);
+  }
+  .tech__heading {
+    font-size: 1.375rem;
+    padding-bottom: 1.4375rem;
+  }
+  .tech__content {
+    padding-block-start: 5rem;
+    padding-block-end: 5.1875rem;
+  }
+  .tech__subheading {
+    font-size: 3.125rem;
+    line-height: 3.625rem;
+    letter-spacing: -0.125rem;
+  }
+  .tech__text {
+    font-size: 0.75rem;
+    line-height: 1.125rem; 
+    letter-spacing: -0.03rem;
+    max-width: 460px;
+    margin-inline: auto;
+    margin-top: 1.375rem;
+  }
+  .tech__blocks {
+    padding-inline: 0;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .tech {
+    --padding: 4.375rem;
+    padding-inline: var(--padding);
+    padding-block: 6.25rem;
+
+
+
+  }
+  .tech__content {
+    padding-block-start: 5.625rem;
+    padding-block-end: 6.25rem;
+  }
+  .tech__text {
+    margin-top: 1.625rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    letter-spacing: -0.035rem;
+  }
+  .tech__block {
+    width: 90px;
+    font-size: 0.875rem;
+    letter-spacing: -0.035rem;
+  }
+}

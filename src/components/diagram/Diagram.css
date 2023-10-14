@@ -1,0 +1,39 @@
+.diagram {
+  display: flex;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.diagram__item { width:66%; }
+.diagram__item_sm { width: 34%; }
+
+.diagram__block {
+  padding-block: 0.6875rem;
+  padding-inline: 0.5rem;
+  background-color: var(--gray-800);
+}
+
+.diagram__block_green {
+  background-color: var(--green-400);
+  color: var(--black)
+}
+.diagram__text {
+  color: var(--gray-500);
+  display: inline-block;
+  margin-top: 0.625rem;
+}
+
+@media screen and (min-width:768px) {
+  .diagram {font-size: 0.875rem;}
+  .diagram__item { width:80%; }
+  .diagram__item_sm { width: 20%; }
+
+  .diagram__block {padding-block: 0.5625rem;}
+  .diagram__text {margin-top: 0.875rem;}
+}
+
+@media screen and (min-width:1280px) {
+  .diagram__text {
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,110 @@
+.portfolio {
+  --padding: 0.875rem;
+  padding-inline: var(--padding);
+  padding-bottom:4.375rem;
+
+  width: calc(100% - var(--padding) * 2);
+}
+
+.portfolio__heading {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  margin: 0;
+}
+
+.portfolio__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 2.5rem;
+
+  display: grid;
+  gap: 1.25rem;
+}
+
+.portfolio__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.75rem; 
+  letter-spacing: -0.045rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-right: 0.5rem;
+
+  transition: filter 250ms ease;
+}
+.portfolio__link:hover { filter: brightness(70%); }
+.portfolio__list-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 1.1875rem;
+}
+.portfolio__list-item:last-of-type  {
+  border: none;
+  padding-bottom: 0;
+}
+.portfolio__link-arrow {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+
+  background: transparent;
+  background-image: url('@/assets/arrow-up.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  width: 11px;
+  height: 11px;
+}
+
+@media screen and (min-width:768px) {
+  .portfolio {
+    --padding: 3.125rem;
+    padding-block-end: 5.625rem;
+    padding-inline: var(--padding);
+  }
+  .portfolio__heading {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+  }
+  .portfolio__list { margin-top: 3.125rem; }
+  .portfolio__link {
+    font-size: 1.75rem;
+    line-height: 3.125rem; 
+    letter-spacing: -0.07rem;
+  }
+  .portfolio__link-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .portfolio {
+    --padding: 4.375rem;
+    padding-inline: var(--padding);
+    padding-bottom: 7.8125rem;
+
+
+    max-width: var(--max-width);
+    margin-inline: auto;
+  }
+  .portfolio__link-arrow {
+    width: 18px;
+    height: 19px;
+  }
+  .portfolio__list-item { border-bottom: 1px solid var(--gray-700);}
+  .portfolio__heading { color: var(--gray-600); }
+  
+  .portfolio__link {
+    font-size: 1.875rem;
+    letter-spacing: -0.075rem;
+  }
+}

@@ -1,0 +1,38 @@
+
+:root {
+  color-scheme: light dark;
+  --blue-700: #073042;
+  --blue-400: #4285F4;
+  --blue-300: #3456F3;
+  --green-400: #3ddc84;
+  --dark: #202020;
+  --black: #000;
+  --white: #fff;
+  --gray-950: #222;
+  --gray-900: #272727;
+  --gray-850: #313131;
+  --gray-800: #303030;
+  --gray-700: #424242;
+  --gray-600: #8b8b8b;
+  --gray-500: #a0a0a0;
+  --gray-300: #dadada;
+  --gray-200: #e6e6e6;
+  --red-500: #EE3465;
+
+  --gap-3: 0.625rem;
+  --gap-3-5: 0.75rem;
+  --gap-4: 0.875rem;
+  --gap-5: 1.125rem;
+  --gap-6: 1.1875rem;
+  --gap-7: 1.375rem;
+  --gap-8: 1.6875rem;
+  --gap-10: 1.875rem;
+  --gap-12: 3.125rem;
+  --gap-15: 3.5rem;
+  --gap-22: 4.375rem;
+  --gap-25: 4.6875rem;
+  --gap-30: 5.625rem;
+  --gap-50: 8.75rem;
+
+  --max-width: 1280px;
+}
