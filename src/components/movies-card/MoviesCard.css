@@ -17,6 +17,10 @@
   font-weight: 500;
   line-height: 1.125rem;
   flex: 4;
+  max-width: 244px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   margin: 0;
 }
