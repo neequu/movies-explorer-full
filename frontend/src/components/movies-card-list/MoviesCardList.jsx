@@ -48,8 +48,6 @@ function MoviesCardList({
       setVisibleLimit(MOVIES_LIMIT_LG);
     }
 
-    console.log(windowWidth);
-
     await new Promise((r) => setTimeout(r, 1000));
   }
 

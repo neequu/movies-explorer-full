@@ -5,7 +5,6 @@ function Movies({
   saveMovie,
   unsaveMovie,
   savedMovies,
-
   moviesData,
 }) {
   return (

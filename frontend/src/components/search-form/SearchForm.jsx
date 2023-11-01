@@ -10,6 +10,7 @@ function SearchForm({
   getMovies,
   movies,
   setNoQueryError,
+  setMovies
 }) {
   const { pathname } = useLocation();
   const { defaultFilterValue, defaultInputValue } = getLocalStorageValues();
@@ -29,8 +30,10 @@ function SearchForm({
   useEffect(() => {
     if (pathname === '/movies') {
       setParams({ query: defaultInputValue, filtered: defaultFilterValue });
-      if (localStorage.getItem('searched-movies')) {
+      if (!localStorage.getItem('searched-movies')) {
         getMovies();
+      } else {
+        setMovies(JSON.parse(localStorage.getItem('searched-movies')))
       }
     } else {
       reqFilter();

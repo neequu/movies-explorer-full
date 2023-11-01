@@ -1,4 +1,4 @@
-import rateLimit from "express-rate-limit";
+import rateLimit from 'express-rate-limit';
 
 // errors
 export const OK_STATUS = 200;
@@ -14,13 +14,12 @@ export const INTERNAL_SERVER_STATUS = 500;
 
 // jwt
 export const saltRounds = 10;
-export const secretKey = "secret";
+export const secretKey = 'secret';
 
 // regex
 
 export const objIdRegex = /^[0-9a-fA-F]{24}$/;
-export const linkRegex =
-  /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/;
+export const linkRegex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/;
 
 // limiter
 export const limiter = rateLimit({
@@ -33,12 +32,12 @@ export const limiter = rateLimit({
 // cors
 export const corsOption = {
   origin: [
-    "https://moovees.nomoredomainsicu.ru",
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "https://movies-explorer-frontend-lime.vercel.app",
+    'https://moovees.nomoredomainsicu.ru',
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:5173',
   ],
 };
 
 // db
-export const dbUrl = "mongodb://127.0.0.1:27017/bitfilmsdb";
+export const dbUrl = 'mongodb://127.0.0.1:27017/bitfilmsdb';

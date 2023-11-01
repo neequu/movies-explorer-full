@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function NotFound() {
   const navigate = useNavigate();
-  console.log(navigate);
 
   return (
     <section className='not-found'>
