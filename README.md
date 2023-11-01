@@ -5,8 +5,7 @@
 ## Содержание
 
 - [Особенности и функционал](#особенности-и-функционал)
-- [Стек и инструменты](#technologies-used)
-- [Структура проекта](#структура-проекта)
+- [Стек и инструменты](#стек-и-инструменты)
 - [Внешний вид](#внешний-вид)
 - [Установка](#установка)
 
@@ -41,16 +40,6 @@
 - **Deployment:**
   - Приложение было задеплоено на яндекс клауд через nginx.
 
-## Структура проекта
-/client: Frontend React application.
-/server: Backend Node.js and Express application.
-/server/models: MongoDB models for data.
-/server/routes: API routes.
-/server/config: Configuration files, including JWT secret keys.
-/server/controllers: Controllers for handling requests.
-Feel free to modify the project structure as needed.
-
-
 ## Внешний вид
 <div align="center">
   
@@ -69,40 +58,31 @@ Feel free to modify the project structure as needed.
 
 ## Установка
 
-1. Clone this repository:
-   ```bash
-   
-   git clone https://github.com/yourusername/movie-app.git
-   
-   ```
-2. Change to the project directory:
-  ```bash
-  cd movie-app
+1. Склонируйте репозиторий:
 
-  ```
-3. Install dependencies for both the frontend and backend:
-  ```bash
-
-  cd client
+```bash 
+git clone https://github.com/neequu/movies-explorer-full.git
+```
+3. Установите зависимости фронта и бэка:
+```bash
+  cd frontend
   npm install
-  cd ../server
+  cd backend
   npm install
+```
 
- ```
-4. Set up your MongoDB database and configure the environment variables.
-
-5. Run the development server for both the frontend and backend:
+3. Запустите dev сервер для фронта и бэка:
 
 Frontend:
-
-bash
-Copy code
-cd client
-npm start
-Backend:
-
 ``` bash
-cd server
-npm start
+cd frontend
+npm run dev
 ```
-Your app should now be running. Access it in your browser at http://localhost:3000.
+   
+Backend:
+``` bash
+cd backend
+npm run dev
+```
+
+Бэкенд должен запуститься по адресу http://localhost:3000, Фроентед по адресу http://localhost:5173
