@@ -38,7 +38,7 @@ export default function useAuth(setLoading) {
       setIsLoggedIn(true);
       navigate('/movies');
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       setAuthError(true);
     } finally {
       setLoading(false);

@@ -25,7 +25,7 @@ function Profile({ signOut, setLoading, loading }) {
       setEditing(false);
       setUpdateSuccess(true);
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       setUpdateError(true);
       setUpdateSuccess(false);
       setDisabled(true);

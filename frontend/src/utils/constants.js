@@ -17,7 +17,8 @@ export const projects = [
 
 export const MOVIES_API_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 export const BASE_URL = 'https://api.nomoreparties.co';
-export const BASE_API_URL = 'https://api.moovees.nomoredomainsicu.ru';
+// export const BASE_API_URL = 'https://api.moovees.nomoredomainsicu.ru';
+export const BASE_API_URL = 'http://localhost:3000';
 
 export const MOVIES_LIMIT_LG = 12;
 export const MOVIES_LIMIT_MD = 8;

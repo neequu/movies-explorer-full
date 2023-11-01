@@ -67,15 +67,17 @@ function App() {
     const jwt = localStorage.getItem('jwt');
     async function auth() {
       try {
+        console.log()
         const user = await getCurrentUserInfo(jwt);
         setCurrentUser(user);
+        setIsLoggedIn(true);
       } catch (e) {
         if (e === 'Ошибка: 401') {
           setIsLoggedIn(false);
         }
+        console.log(e)
         return;
       }
-      setIsLoggedIn(true);
     }
 
     auth();
@@ -89,7 +91,6 @@ function App() {
         const res = await getSavedMovies(jwt);
         setSavedMovies(res);
       } catch (e) {
-        console.log(e);
         setErrorFetching(true);
       } finally {
         setLoading(false);
@@ -109,7 +110,6 @@ function App() {
       const newMovie = await saveMovie(jwt, movie);
       setSavedMovies((p) => [...p, newMovie]);
     } catch (e) {
-      console.log(e);
     }
   }
   async function removeMovieFromSavedList(id) {
@@ -134,7 +134,7 @@ function App() {
       localStorage.setItem('searched-movies', JSON.stringify(res));
       setMovies(res);
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       setErrorFetching(true);
     } finally {
       setLoading(false);
@@ -206,6 +206,7 @@ function App() {
                     getMovies={getMovies}
                     movies={movies}
                     setNoQueryError={setNoQueryError}
+                    setMovies={setMovies}
                   />
                   <MoviesCardList
                     moviesData={movies}

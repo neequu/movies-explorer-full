@@ -6,6 +6,6 @@ export async function fetchMovies() {
     const res = await fetch(MOVIES_API_URL);
     return checkResponse(res);
   } catch (e) {
-    console.log(e.message);
+    // console.log(e.message);
   }
 }
