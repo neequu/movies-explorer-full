@@ -85,4 +85,5 @@ cd backend
 npm run dev
 ```
 
+Бэкенд должен запуститься по адресу http://localhost:3000, Фроентед по адресу http://localhost:5173
 
